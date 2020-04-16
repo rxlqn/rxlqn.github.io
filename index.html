@@ -1,0 +1,2934 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Rx_Lqn Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Rx_Lqn Blog">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rx_Lqn Blog">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Rx_Lqn Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Rx_Lqn Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-write">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/write" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>write</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/08/manchester_coding/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/10/08/manchester_coding/" class="post-title-link" itemprop="url">manchester_coding</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-10-08 20:51:16 / Modified: 21:02:17" itemprop="dateCreated datePublished" datetime="2019-10-08T20:51:16+08:00">2019-10-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="数字信号编码是要解决数字数据的数字信号表示问题，即通过对数字信号进行编码来表示数据。数字信号编码的工作一般由硬件完成，常用的编码方法有以下三种：不归零码码、曼彻斯特编码、差分曼彻斯特编码。"><a href="#数字信号编码是要解决数字数据的数字信号表示问题，即通过对数字信号进行编码来表示数据。数字信号编码的工作一般由硬件完成，常用的编码方法有以下三种：不归零码码、曼彻斯特编码、差分曼彻斯特编码。" class="headerlink" title="数字信号编码是要解决数字数据的数字信号表示问题，即通过对数字信号进行编码来表示数据。数字信号编码的工作一般由硬件完成，常用的编码方法有以下三种：不归零码码、曼彻斯特编码、差分曼彻斯特编码。"></a>数字信号编码是要解决数字数据的数字信号表示问题，即通过对数字信号进行编码来表示数据。数字信号编码的工作一般由硬件完成，常用的编码方法有以下三种：不归零码码、曼彻斯特编码、差分曼彻斯特编码。</h4><ul>
+<li>差分曼彻斯特编码的优点为：收发双方可以<strong>根据编码自带的时钟信号来保持同步</strong>，无需专门传递同步信号的线路，因此成本低；缺点为：实现技术复杂。</li>
+<li>曼彻斯特编码（Manchester Encoding），也叫做相位编码(PE)，是一个同步时钟编码技术，被物理层使用来编码一个同步位流的时钟和数据。曼彻斯特编码被用在以太网媒介系统中。曼彻斯特编码提供一个简单的方式给编码简单的二进制序列而没有长的周期没有转换级别，因而防止时钟同步的丢失，或来自低频率位移在贫乏补偿的模拟链接位错误。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/30/cct2rgb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/30/cct2rgb/" class="post-title-link" itemprop="url">cct2rgb</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-30 20:38:26 / Modified: 20:46:03" itemprop="dateCreated datePublished" datetime="2019-05-30T20:38:26+08:00">2019-05-30</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="How-to-convert-CCT-to-RGB"><a href="#How-to-convert-CCT-to-RGB" class="headerlink" title="How to convert CCT to RGB"></a>How to convert CCT to RGB</h2><ul>
+<li>Calculate cct from RGB (1000~40000)</li>
+<li>Calculate luminance of those RGB values (Luminance = (Max(R,G,B) + Min(R,G,B)) / 2)</li>
+<li>Alpha-blend the RGB values with the temperature RGB values at the requested strength (max strength = 50/50 blend)</li>
+<li>Calculate HSL equivalents for the newly blended RGB values</li>
+<li>Convert those HSL equivalents back to RGB, but substitute the ORIGINAL luminance value (this maintains the luminance of the pixel)</li>
+</ul>
+<h3 id="Matlab-implementation"><a href="#Matlab-implementation" class="headerlink" title="Matlab implementation"></a>Matlab implementation</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">function img_new = temperatureRGB(img,cct)</span><br><span class="line">tempStrength = 30/200;       % 1-100    转移量</span><br><span class="line">cct(cct&lt;1000) = 1000;</span><br><span class="line">cct(cct&gt;40000) = 40000;</span><br><span class="line"></span><br><span class="line">%% example</span><br><span class="line">% img = imread(&apos;T:\My_Project\image harmonization\xue_reimplement\code\testdata\a0711-WP_IMG_1592.jpg&apos;);</span><br><span class="line">% img = im2double(img);</span><br><span class="line">% [row,coloum,channel] = size(img);</span><br><span class="line">% </span><br><span class="line">% img_xyz = rgb2xyz(img);</span><br><span class="line">% xy = xyz2xy(img_xyz);</span><br><span class="line">% cct = xy2cct(xy);     %xy color space  </span><br><span class="line">%%</span><br><span class="line">img = im2double(img);</span><br><span class="line"></span><br><span class="line">old_lumi = rgb2hsl(img);</span><br><span class="line">old_lumi = old_lumi(:,:,3);</span><br><span class="line"></span><br><span class="line">temperature = cct / 100;</span><br><span class="line">[r,c] = size(temperature);</span><br><span class="line">%</span><br><span class="line">% Calculate RED:</span><br><span class="line">%</span><br><span class="line">red(temperature&lt;=66) = 255;</span><br><span class="line">red(temperature&gt;66) = (((temperature(temperature&gt;66) - 60).^-0.1332047592)) * 329.698727446;</span><br><span class="line">red(red&gt;255) = 255;</span><br><span class="line">red(red&lt;0) = 0;</span><br><span class="line">% red = reshape(red,r,c);</span><br><span class="line"></span><br><span class="line">%</span><br><span class="line">% Calculate GREEN:</span><br><span class="line">%</span><br><span class="line">green(temperature&lt;=66) = 99.4708025861 * reallog(temperature(temperature&lt;=66)) - 161.1195681661;</span><br><span class="line">green(temperature&gt;66) = ((temperature(temperature&gt;66) - 60).^-0.0755148492) * 288.1221695283;</span><br><span class="line">green(green&gt;255) = 255;</span><br><span class="line">green(green&lt;0) = 0;</span><br><span class="line">% green = reshape(green,r,c);</span><br><span class="line"></span><br><span class="line">%</span><br><span class="line">% Calculate BLUE:</span><br><span class="line">%</span><br><span class="line">blue(temperature&gt;=66) = 255;</span><br><span class="line">blue(temperature&lt;=19) = 0;</span><br><span class="line"></span><br><span class="line">blue(temperature&lt;66&amp;temperature&gt;19) = reallog((temperature(temperature&lt;66&amp;temperature&gt;19) - 10))* 138.5177312231 - 305.0447927307;</span><br><span class="line">blue(blue&gt;255) = 255;</span><br><span class="line">blue(blue&lt;0) = 0;</span><br><span class="line">% blue = reshape(blue,r,c);</span><br><span class="line"></span><br><span class="line">%</span><br><span class="line">% Return RGB Vector</span><br><span class="line">%</span><br><span class="line">sRGB = [red,green,blue];</span><br><span class="line">sRGB = reshape(sRGB,r,c,3);</span><br><span class="line"></span><br><span class="line">sRGB = img * (1-tempStrength) + sRGB/255 * tempStrength;   %0-1 double</span><br><span class="line"></span><br><span class="line">% 保留旧的亮度</span><br><span class="line">new_hsl = rgb2hsl(sRGB);</span><br><span class="line">new_hsl(:,:,3) = old_lumi;</span><br><span class="line">img_new = hsl2rgb(new_hsl);</span><br><span class="line">imshow(img_new);</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>Thanks to <strong>Tanner</strong> for his algorithm</p>
+<p>Links: <a href="http://www.tannerhelland.com/4435/convert-temperature-rgb-algorithm-code/" target="_blank" rel="noopener">http://www.tannerhelland.com/4435/convert-temperature-rgb-algorithm-code/</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/caffe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/16/caffe/" class="post-title-link" itemprop="url">caffe</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-16 20:01:29 / Modified: 20:10:42" itemprop="dateCreated datePublished" datetime="2019-05-16T20:01:29+08:00">2019-05-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Windows-caffe-gpu"><a href="#Windows-caffe-gpu" class="headerlink" title="Windows caffe_gpu"></a>Windows caffe_gpu</h3><hr>
+<p>clone with https: <a href="https://github.com/BVLC/caffe.git" target="_blank" rel="noopener">https://github.com/BVLC/caffe.git</a></p>
+<p>Link: <a href="https://github.com/BVLC/caffe/tree/windows" target="_blank" rel="noopener">https://github.com/BVLC/caffe/tree/windows</a></p>
+<p><strong>Visual Studio 2013</strong></p>
+<p><strong>CUDA</strong> 7.5</p>
+<p><strong><em>or</em></strong></p>
+<p><strong>Visual Studio</strong> 2015</p>
+<p><strong>CUDA</strong> 8.0</p>
+<p><strong>cudnn</strong> Corresponding version</p>
+<p>TODO: using <strong><em>Docker</em></strong> to make version management</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/07/color-space/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/07/color-space/" class="post-title-link" itemprop="url">Color_space</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-07 17:20:50" itemprop="dateCreated datePublished" datetime="2019-05-07T17:20:50+08:00">2019-05-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-24 14:58:46" itemprop="dateModified" datetime="2019-05-24T14:58:46+08:00">2019-05-24</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="XYZ"><a href="#XYZ" class="headerlink" title="XYZ"></a>XYZ</h2><p> Y corresponds to relative <strong>luminance</strong>; Y also carries color information related to the eye’s “M” (yellow-green) cone response. </p>
+<p> X and Z carry additional information about how the cones in the human eye respond to light waves of varying frequencies.</p>
+<h2 id="xyY"><a href="#xyY" class="headerlink" title="xyY"></a>xyY</h2><p>xyY is calculated from XYZ: (<strong><em>normalization</em></strong>)</p>
+<p>x = X / (X+Y+Z)</p>
+<p>y = Y / (X+Y+Z)</p>
+<p>Y = Y</p>
+<p>xyY space cleanly separates the XYZ Y (luminance) from color, or rather from <strong>chromaticity</strong>, which is what the “xy” in xyY stands for.</p>
+<h2 id="CCT"><a href="#CCT" class="headerlink" title="CCT"></a>CCT</h2><p>CCT=449n3+3525n2+6823.3n+5520.33</p>
+<p>where n=(x-0.3320)/(0.1858-y)</p>
+<h3 id="frome-rgb-color-space"><a href="#frome-rgb-color-space" class="headerlink" title="frome rgb color space"></a>frome rgb color space</h3><p>CCT=449n3+3525n2+6823.3n+5520.33<br>where n=((0.23881)R+(0.25499)G+(-0.58291)B)/((0.11109)R+(-0.85406)G+(0.52289)B)</p>
+<h2 id="HSV"><a href="#HSV" class="headerlink" title="HSV"></a>HSV</h2><p>RGB to HSV conversion formula</p>
+<p>The R,G,B values are divided by 255 to change the range from 0..255 to 0..1:</p>
+<p>R’ = R/255<br>G’ = G/255<br>B’ = B/255</p>
+<p>Cmax = max(R’, G’, B’)</p>
+<p>Cmin = min(R’, G’, B’)</p>
+<p>Î” = Cmax - Cmin</p>
+<p>Hue calculation:</p>
+<p>&lt;img src=<a href="https://www.rapidtables.com/convert/color/rgb-to-hsv/hue-calc2.gif&gt;" target="_blank" rel="noopener">https://www.rapidtables.com/convert/color/rgb-to-hsv/hue-calc2.gif&gt;</a></p>
+<p>Saturation calculation:</p>
+<p>&lt;img src=<a href="https://www.rapidtables.com/convert/color/rgb-to-hsv/sat-calc.gif&gt;" target="_blank" rel="noopener">https://www.rapidtables.com/convert/color/rgb-to-hsv/sat-calc.gif&gt;</a></p>
+<p>Value calculation:<br>V = Cmax</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/23/colorRealism-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/23/colorRealism-2/" class="post-title-link" itemprop="url">colorRealism_2</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-23 21:47:36" itemprop="dateCreated datePublished" datetime="2019-04-23T21:47:36+08:00">2019-04-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-27 12:54:54" itemprop="dateModified" datetime="2019-04-27T12:54:54+08:00">2019-04-27</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="lalonde-iccv-07"><a href="#lalonde-iccv-07" class="headerlink" title="lalonde_iccv_07"></a>lalonde_iccv_07</h1><h2 id="Application-to-Automatic-Image-Recoloring"><a href="#Application-to-Automatic-Image-Recoloring" class="headerlink" title="Application to Automatic Image Recoloring"></a>Application to Automatic Image Recoloring</h2><h3 id="Classify-the-image-and-find-whether-matching-global-scene-avaliable"><a href="#Classify-the-image-and-find-whether-matching-global-scene-avaliable" class="headerlink" title="Classify the image and find whether matching global scene avaliable."></a>Classify the image and find whether matching global scene avaliable.</h3><ul>
+<li>recolor the object to match the colors of similar objects in that nearest scene.</li>
+<li>try to make the object more similar to its surroundings.</li>
+</ul>
+<p>The goal of recoloring is to modify a source color distribution Ds in order to match a target color distribution Dt.</p>
+<h3 id="They-propose-an-entirely-automatic-algorithm"><a href="#They-propose-an-entirely-automatic-algorithm" class="headerlink" title="They propose an entirely automatic algorithm."></a>They propose an entirely <strong><em>automatic</em></strong> algorithm.</h3><p>Each color distribution is represented by a <strong>mixture of k spherical gaussians</strong> (k = 100 and remains constant for all images), and the distributions are matched in a soft way using the solution to the well-known transportation problem.</p>
+<p>The algorithm is divided in three steps.(In CIE LAB color space)</p>
+<ul>
+<li>use the <strong>Earth Mover’s Distance</strong> algorithm to compute the best assignment between the clusters in Ds and Dt.</li>
+<li>color shift vectors for each cluster in Ds are computed as a <strong>weighted</strong> average of its distance in color space to each of its assigned clusters in Dt.</li>
+<li>every pixel in Ds can be recolored by computing a weighted average of clusters shifts, with weights <strong>inversely proportional</strong> to the pixel-cluster distance.</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/22/colorRealism/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/22/colorRealism/" class="post-title-link" itemprop="url">colorRealism_1</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-22 14:12:09" itemprop="dateCreated datePublished" datetime="2019-04-22T14:12:09+08:00">2019-04-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-23 22:12:07" itemprop="dateModified" datetime="2019-04-23T22:12:07+08:00">2019-04-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Earth mover’s distance</p>
+<p>Pairwise distance == Euclidean distance</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/13/Youtube-VOS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/13/Youtube-VOS/" class="post-title-link" itemprop="url">Youtube_VOS</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-13 12:58:52 / Modified: 13:24:13" itemprop="dateCreated datePublished" datetime="2019-04-13T12:58:52+08:00">2019-04-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="YouTube-VOS"><a href="#YouTube-VOS" class="headerlink" title="YouTube-VOS"></a>YouTube-VOS</h1><p> &nbsp; &nbsp; &nbsp; &nbsp;The YouTube-VOS is the first large-scale dataset for video object segmentation. Our dataset contains 4000+ YouTube videos, 70+ common objects and densely-sampled high-quality pixel-level annotations. It is more than <strong>30 times larger</strong> than the existing largest dataset (i.e. DAVIS) for video object segmentation.<br> &nbsp; &nbsp; &nbsp; &nbsp; After analyzing ‘meta.json’, we found that the training set contains <strong>3471</strong> videos and <strong>5945</strong> objects in total. There is <strong>63</strong> categories in training set, each of which is annotated with a category name. The types of the object and the number of object and videos of each are as follows.<br> 
+<table>
+   <tr>
+      <td>type</td>
+      <td>object_number</td>
+      <td>video_number</td>
+   </tr>
+   <tr>
+      <td>person</td>
+      <td>1499</td>
+      <td>680</td>
+   </tr>
+   <tr>
+      <td>ape</td>
+      <td>201</td>
+      <td>124</td>
+   </tr>
+   <tr>
+      <td>parrot</td>
+      <td>185</td>
+      <td>135</td>
+   </tr>
+   <tr>
+      <td>giant_panda</td>
+      <td>182</td>
+      <td>143</td>
+   </tr>
+   <tr>
+      <td>duck</td>
+      <td>162</td>
+      <td>71</td>
+   </tr>
+   <tr>
+      <td>lizard</td>
+      <td>157</td>
+      <td>137</td>
+   </tr>
+   <tr>
+      <td>hat</td>
+      <td>142</td>
+      <td>51</td>
+   </tr>
+   <tr>
+      <td>sedan</td>
+      <td>141</td>
+      <td>80</td>
+   </tr>
+   <tr>
+      <td>dog</td>
+      <td>137</td>
+      <td>73</td>
+   </tr>
+   <tr>
+      <td>monkey</td>
+      <td>134</td>
+      <td>84</td>
+   </tr>
+   <tr>
+      <td>sheep</td>
+      <td>130</td>
+      <td>59</td>
+   </tr>
+   <tr>
+      <td>rabbit</td>
+      <td>113</td>
+      <td>83</td>
+   </tr>
+   <tr>
+      <td>fish</td>
+      <td>109</td>
+      <td>57</td>
+   </tr>
+   <tr>
+      <td>cow</td>
+      <td>104</td>
+      <td>55</td>
+   </tr>
+   <tr>
+      <td>giraffe</td>
+      <td>100</td>
+      <td>46</td>
+   </tr>
+   <tr>
+      <td>zebra</td>
+      <td>96</td>
+      <td>47</td>
+   </tr>
+   <tr>
+      <td>snake</td>
+      <td>93</td>
+      <td>86</td>
+   </tr>
+   <tr>
+      <td>bus</td>
+      <td>91</td>
+      <td>42</td>
+   </tr>
+   <tr>
+      <td>bear</td>
+      <td>87</td>
+      <td>50</td>
+   </tr>
+   <tr>
+      <td>cat</td>
+      <td>86</td>
+      <td>55</td>
+   </tr>
+   <tr>
+      <td>fox</td>
+      <td>80</td>
+      <td>58</td>
+   </tr>
+   <tr>
+      <td>skateboard</td>
+      <td>76</td>
+      <td>36</td>
+   </tr>
+   <tr>
+      <td>leopard</td>
+      <td>75</td>
+      <td>56</td>
+   </tr>
+   <tr>
+      <td>elephant</td>
+      <td>75</td>
+      <td>41</td>
+   </tr>
+   <tr>
+      <td>truck</td>
+      <td>73</td>
+      <td>37</td>
+   </tr>
+   <tr>
+      <td>dolphin</td>
+      <td>73</td>
+      <td>44</td>
+   </tr>
+   <tr>
+      <td>hand</td>
+      <td>72</td>
+      <td>42</td>
+   </tr>
+   <tr>
+      <td>turtle</td>
+      <td>71</td>
+      <td>57</td>
+   </tr>
+   <tr>
+      <td>deer</td>
+      <td>71</td>
+      <td>50</td>
+   </tr>
+   <tr>
+      <td>airplane</td>
+      <td>69</td>
+      <td>51</td>
+   </tr>
+   <tr>
+      <td>train</td>
+      <td>65</td>
+      <td>56</td>
+   </tr>
+   <tr>
+      <td>owl</td>
+      <td>63</td>
+      <td>52</td>
+   </tr>
+   <tr>
+      <td>bird</td>
+      <td>62</td>
+      <td>37</td>
+   </tr>
+   <tr>
+      <td>tiger</td>
+      <td>58</td>
+      <td>47</td>
+   </tr>
+   <tr>
+      <td>shark</td>
+      <td>56</td>
+      <td>42</td>
+   </tr>
+   <tr>
+      <td>motorbike</td>
+      <td>52</td>
+      <td>30</td>
+   </tr>
+   <tr>
+      <td>frog</td>
+      <td>52</td>
+      <td>40</td>
+   </tr>
+   <tr>
+      <td>earless_seal</td>
+      <td>52</td>
+      <td>31</td>
+   </tr>
+   <tr>
+      <td>mouse</td>
+      <td>51</td>
+      <td>37</td>
+   </tr>
+   <tr>
+      <td>plant</td>
+      <td>49</td>
+      <td>20</td>
+   </tr>
+   <tr>
+      <td>others</td>
+      <td>48</td>
+      <td>27</td>
+   </tr>
+   <tr>
+      <td>horse</td>
+      <td>47</td>
+      <td>22</td>
+   </tr>
+   <tr>
+      <td>penguin</td>
+      <td>45</td>
+      <td>20</td>
+   </tr>
+   <tr>
+      <td>lion</td>
+      <td>42</td>
+      <td>30</td>
+   </tr>
+   <tr>
+      <td>hedgehog</td>
+      <td>42</td>
+      <td>33</td>
+   </tr>
+   <tr>
+      <td>umbrella</td>
+      <td>41</td>
+      <td>16</td>
+   </tr>
+   <tr>
+      <td>snail</td>
+      <td>38</td>
+      <td>32</td>
+   </tr>
+   <tr>
+      <td>eagle</td>
+      <td>37</td>
+      <td>34</td>
+   </tr>
+   <tr>
+      <td>boat</td>
+      <td>36</td>
+      <td>24</td>
+   </tr>
+   <tr>
+      <td>knife</td>
+      <td>35</td>
+      <td>17</td>
+   </tr>
+   <tr>
+      <td>camel</td>
+      <td>34</td>
+      <td>32</td>
+   </tr>
+   <tr>
+      <td>whale</td>
+      <td>33</td>
+      <td>26</td>
+   </tr>
+   <tr>
+      <td>crocodile</td>
+      <td>32</td>
+      <td>23</td>
+   </tr>
+   <tr>
+      <td>paddle</td>
+      <td>29</td>
+      <td>10</td>
+   </tr>
+   <tr>
+      <td>frisbee</td>
+      <td>29</td>
+      <td>18</td>
+   </tr>
+   <tr>
+      <td>tennis_racket</td>
+      <td>28</td>
+      <td>13</td>
+   </tr>
+   <tr>
+      <td>raccoon</td>
+      <td>26</td>
+      <td>20</td>
+   </tr>
+   <tr>
+      <td>toilet</td>
+      <td>23</td>
+      <td>15</td>
+   </tr>
+   <tr>
+      <td>squirrel</td>
+      <td>20</td>
+      <td>18</td>
+   </tr>
+   <tr>
+      <td>sign</td>
+      <td>18</td>
+      <td>10</td>
+   </tr>
+   <tr>
+      <td>bucket</td>
+      <td>9</td>
+      <td>4</td>
+   </tr>
+   <tr>
+      <td>parachute</td>
+      <td>8</td>
+      <td>4</td>
+   </tr>
+   <tr>
+      <td>bike</td>
+      <td>1</td>
+      <td>1</td>
+   </tr>
+   <tr>
+      <td></td>
+   </tr>
+</table>
+<br>&nbsp; &nbsp; &nbsp; &nbsp;The code to get the detail of the json file are as follows.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">jsonData = loadjson(&apos;meta.json&apos;);</span><br><span class="line"></span><br><span class="line">% load jsonData.mat</span><br><span class="line">videos_summation = fieldnames(jsonData.videos); %展开jsonData</span><br><span class="line">videos_num = length(videos_summation)</span><br><span class="line">videos = struct2cell(jsonData);</span><br><span class="line">videos = struct2cell(videos&#123;1,1&#125;);</span><br><span class="line">for i=1:videos_num</span><br><span class="line">    video_saparate(i) =  struct2cell(videos&#123;i,1&#125;);  %展开videos</span><br><span class="line">    video_saparate_2&#123;i&#125; = struct2cell(video_saparate&#123;1,i&#125;);%video_mask_num 表示每个video有几个mask</span><br><span class="line">    video_mask_num(i)= length(video_saparate_2&#123;1,i&#125;);</span><br><span class="line"></span><br><span class="line">    for j=1:video_mask_num(i)</span><br><span class="line">        video_mask&#123;j&#125; = struct2cell(video_saparate_2&#123;1,i&#125;&#123;j,1&#125;);  %展开单独的mask     </span><br><span class="line">    end</span><br><span class="line">    </span><br><span class="line">    video_frame_number = length (video_mask&#123;1,1&#125;&#123;2,1&#125;);</span><br><span class="line">    video_object = video_mask&#123;1,1&#125;&#123;1,1&#125;;</span><br><span class="line">    object&#123;i&#125; = video_object;</span><br><span class="line">    mask_number(i) = video_mask_num(i);</span><br><span class="line">    frame_number(i) = video_frame_number;</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line">object = reshape(object,[videos_num,1]);</span><br><span class="line">mask_number = mask_number&apos;;</span><br><span class="line">frame_number = frame_number&apos;;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/video-harmonization-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/12/video-harmonization-1/" class="post-title-link" itemprop="url">Video harmonization 1</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-12 16:46:57 / Modified: 20:23:20" itemprop="dateCreated datePublished" datetime="2019-04-12T16:46:57+08:00">2019-04-12</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>To incorporate temporal consistency between consecutive harmonized frames, a <strong>two-frame</strong> coordinated training strategy with a <strong>regional temporal loss</strong> is adopted.</p>
+<ul>
+<li>Training phase: the two frames are fed to the harmonization network in a<br>coordinate but separate way</li>
+<li>Testing phase:  the harmonization network processes a video in a frame by frame way.</li>
+</ul>
+<p>To further enhance the realism of the harmonized results, the harmonization network is trained in <strong>an adversarial way</strong> with a pixel-wise disharmony discriminator</p>
+<p>The well-trained discriminator can also be employed to <em>predict the disharmony area</em> in the input, which holds as a replacement of the input foreground mask.</p>
+<blockquote>
+<p><del>DAVIS</del></p>
+<ul>
+<li>The harmonization network requires training data covering <strong>tremendous scenes</strong> to learn the natural appearances of foregrounds in various cases.</li>
+<li>Meanwhile, we also need the ground-truth <strong><em>optical flows</em></strong> between consecutive frames for evaluating the <strong>temporal consistency</strong>.<br>Training a <strong>FlowNet</strong> to predict optical flows, which shows competitive performance compared to state-of-the-art methods like DeepFlow and<br>EpicFlow.</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Dancing MSCOCO</p>
+<ul>
+<li>Training all the classes together inevitably introduces<br><strong>biases</strong>. <ul>
+<li>select images containing ’people’ as the foregrounds</li>
+<li>wipe off the images whose foreground area is smaller than <strong>10%</strong> of the whole image</li>
+</ul>
+</li>
+<li>Cut out the foreground and apply inpainting to fill the holes to obtain pure background images.<ul>
+<li>simulates a background movement in a video.</li>
+</ul>
+</li>
+<li>We apply color adjustments to the foregrounds to simulate the composite images.<ul>
+<li>performing color transfer between random foreground pairs</li>
+<li>perform random adjustments of the <strong>basic color properties</strong><br>including <strong>exposure, hue, saturation, temperature, contrast, and<br>tone curve</strong>.</li>
+</ul>
+</li>
+<li>we apply the same random affine transform to the original foreground and the color adjusted foreground, which simulates a <strong>foreground movement</strong> in a video, and paste it back to the corresponding randomly cropped background.<ul>
+<li>Since we know the exact affine transform between the foregrounds,<br>it is easy to acquire the corresponding <strong>ground-truth optical<br>flow</strong>.</li>
+<li>The affine transform parameters are sampled from a<br>suitable range in order not to conduct large-scale foreground<br>movements.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="Finally"><a href="#Finally" class="headerlink" title="Finally"></a>Finally</h3><p><strong><em>33,338</em></strong> pairs of ”consecutive original frames” and their corresponding” consecutive composite frames”. </p>
+<ul>
+<li>Training data: 29,818 pairs</li>
+<li>Validation data: 1,000 pairs</li>
+<li>Testing data: 2,520 pairs</li>
+</ul>
+<p>We have also tried generating more than one distorted copy for each image, but found a <strong>marginal improvement</strong> in the training.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/Image-harmonization-dataset/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/04/Image-harmonization-dataset/" class="post-title-link" itemprop="url">Image harmonization dataset</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-04 08:21:49" itemprop="dateCreated datePublished" datetime="2019-04-04T08:21:49+08:00">2019-04-04</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-12 20:24:01" itemprop="dateModified" datetime="2019-04-12T20:24:01+08:00">2019-04-12</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>All synthesized composite images has the same semantic information with the original one.</p>
+<h2 id="Image-with-Segmentation-Masks"><a href="#Image-with-Segmentation-Masks" class="headerlink" title="Image with Segmentation Masks"></a>Image with Segmentation Masks</h2><ul>
+<li>Microsoft COCO dataset<ul>
+<li>Object segmentation <strong>masks</strong> and image.</li>
+<li>Transfer the appearance from the object with the <strong>same semantics</strong> to the target object. In order to ensure the edited object to be <strong>plausibale</strong>.</li>
+<li>Color transfer: <ul>
+<li>statistics of the luminance</li>
+<li>color temperature</li>
+<li>histogram matching method.</li>
+</ul>
+</li>
+<li>Applying different transfer parameters for both the luminance and color temperature <strong>on one image</strong>.</li>
+<li>Using an <strong>aesthetics prediction model</strong> to filter out low quality images.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Images-with-Different-Styles"><a href="#Images-with-Different-Styles" class="headerlink" title="Images with Different Styles"></a>Images with Different Styles</h2><ul>
+<li>MIT-Adobe FiveK dataset <ul>
+<li>Original image and another <strong>5 different styles</strong> re-touched by professional photographers.</li>
+<li>Randomly selected style and manually segment a region</li>
+<li>Crop this segmented region and overlay on the image<br>with another style to generate the synthesized composite<br>image.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Flickr-Images-with-Diversity"><a href="#Flickr-Images-with-Diversity" class="headerlink" title="Flickr Images with Diversity"></a>Flickr Images with Diversity</h2><ul>
+<li>Flicker dataset<ul>
+<li>Images contain different scenes or sylized images</li>
+<li>Using pre-trained scene parsing model to predict semantic pixel-wise.</li>
+</ul>
+</li>
+</ul>
+<p>Refernced: <a href="https://arxiv.org/pdf/1703.00069.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1703.00069.pdf</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/Video-object-segmentation-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/01/Video-object-segmentation-2/" class="post-title-link" itemprop="url">Video-object-segmentation-2</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-01 17:15:36" itemprop="dateCreated datePublished" datetime="2019-04-01T17:15:36+08:00">2019-04-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-12 20:23:43" itemprop="dateModified" datetime="2019-04-12T20:23:43+08:00">2019-04-12</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>DAVIS</strong> is a dataset with pixel-perfect ground truth annotations</p>
+<p>Dataset</p>
+<p>Our dataset contains three subsets.</p>
+<ul>
+<li>Training: 3471 video sequences with densely-sampled multi-object annotations. Each object is annotated with a category name, there is 65 categories in traning set.<br>Validation: 474 video sequences with the first-frame annotations. It includes objects from the 65 training categories, and 26 unseen categories in training.</li>
+<li>Test: Another 508 sequences with the first-frame annotations. It includes objects from the 65 training categories, and 29 unseen categories in training.</li>
+<li>RGB images and annotations for the labeled frames will be provided. We will also provide a download link for all image frames. Evaluation of validation and test sets will be done by uploading results to our evaluation server. Category information for validation and test sets will not be released.</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">liwy</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/rxlqn" title="GitHub &rarr; https://github.com/rxlqn" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:rxlqn@126.com" title="E-Mail &rarr; mailto:rxlqn@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-fa-battery-full"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liwy</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+
+  
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[manchester_coding]]></title>
+    <url>%2F2019%2F10%2F08%2Fmanchester_coding%2F</url>
+    <content type="text"><![CDATA[数字信号编码是要解决数字数据的数字信号表示问题，即通过对数字信号进行编码来表示数据。数字信号编码的工作一般由硬件完成，常用的编码方法有以下三种：不归零码码、曼彻斯特编码、差分曼彻斯特编码。 差分曼彻斯特编码的优点为：收发双方可以根据编码自带的时钟信号来保持同步，无需专门传递同步信号的线路，因此成本低；缺点为：实现技术复杂。 曼彻斯特编码（Manchester Encoding），也叫做相位编码(PE)，是一个同步时钟编码技术，被物理层使用来编码一个同步位流的时钟和数据。曼彻斯特编码被用在以太网媒介系统中。曼彻斯特编码提供一个简单的方式给编码简单的二进制序列而没有长的周期没有转换级别，因而防止时钟同步的丢失，或来自低频率位移在贫乏补偿的模拟链接位错误。]]></content>
+      <tags>
+        <tag>coding</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[cct2rgb]]></title>
+    <url>%2F2019%2F05%2F30%2Fcct2rgb%2F</url>
+    <content type="text"><![CDATA[How to convert CCT to RGB Calculate cct from RGB (1000~40000) Calculate luminance of those RGB values (Luminance = (Max(R,G,B) + Min(R,G,B)) / 2) Alpha-blend the RGB values with the temperature RGB values at the requested strength (max strength = 50/50 blend) Calculate HSL equivalents for the newly blended RGB values Convert those HSL equivalents back to RGB, but substitute the ORIGINAL luminance value (this maintains the luminance of the pixel) Matlab implementation12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364function img_new = temperatureRGB(img,cct)tempStrength = 30/200; % 1-100 转移量cct(cct&lt;1000) = 1000;cct(cct&gt;40000) = 40000;%% example% img = imread(&apos;T:\My_Project\image harmonization\xue_reimplement\code\testdata\a0711-WP_IMG_1592.jpg&apos;);% img = im2double(img);% [row,coloum,channel] = size(img);% % img_xyz = rgb2xyz(img);% xy = xyz2xy(img_xyz);% cct = xy2cct(xy); %xy color space %%img = im2double(img);old_lumi = rgb2hsl(img);old_lumi = old_lumi(:,:,3);temperature = cct / 100;[r,c] = size(temperature);%% Calculate RED:%red(temperature&lt;=66) = 255;red(temperature&gt;66) = (((temperature(temperature&gt;66) - 60).^-0.1332047592)) * 329.698727446;red(red&gt;255) = 255;red(red&lt;0) = 0;% red = reshape(red,r,c);%% Calculate GREEN:%green(temperature&lt;=66) = 99.4708025861 * reallog(temperature(temperature&lt;=66)) - 161.1195681661;green(temperature&gt;66) = ((temperature(temperature&gt;66) - 60).^-0.0755148492) * 288.1221695283;green(green&gt;255) = 255;green(green&lt;0) = 0;% green = reshape(green,r,c);%% Calculate BLUE:%blue(temperature&gt;=66) = 255;blue(temperature&lt;=19) = 0;blue(temperature&lt;66&amp;temperature&gt;19) = reallog((temperature(temperature&lt;66&amp;temperature&gt;19) - 10))* 138.5177312231 - 305.0447927307;blue(blue&gt;255) = 255;blue(blue&lt;0) = 0;% blue = reshape(blue,r,c);%% Return RGB Vector%sRGB = [red,green,blue];sRGB = reshape(sRGB,r,c,3);sRGB = img * (1-tempStrength) + sRGB/255 * tempStrength; %0-1 double% 保留旧的亮度new_hsl = rgb2hsl(sRGB);new_hsl(:,:,3) = old_lumi;img_new = hsl2rgb(new_hsl);imshow(img_new);end Thanks to Tanner for his algorithm Links: http://www.tannerhelland.com/4435/convert-temperature-rgb-algorithm-code/]]></content>
+      <tags>
+        <tag>lqn</tag>
+        <tag>color</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[caffe]]></title>
+    <url>%2F2019%2F05%2F16%2Fcaffe%2F</url>
+    <content type="text"><![CDATA[Windows caffe_gpu clone with https: https://github.com/BVLC/caffe.git Link: https://github.com/BVLC/caffe/tree/windows Visual Studio 2013 CUDA 7.5 or Visual Studio 2015 CUDA 8.0 cudnn Corresponding version TODO: using Docker to make version management]]></content>
+      <tags>
+        <tag>lqn</tag>
+        <tag>caffe</tag>
+        <tag>gpu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Color_space]]></title>
+    <url>%2F2019%2F05%2F07%2Fcolor-space%2F</url>
+    <content type="text"><![CDATA[XYZ Y corresponds to relative luminance; Y also carries color information related to the eye’s “M” (yellow-green) cone response. X and Z carry additional information about how the cones in the human eye respond to light waves of varying frequencies. xyYxyY is calculated from XYZ: (normalization) x = X / (X+Y+Z) y = Y / (X+Y+Z) Y = Y xyY space cleanly separates the XYZ Y (luminance) from color, or rather from chromaticity, which is what the “xy” in xyY stands for. CCTCCT=449n3+3525n2+6823.3n+5520.33 where n=(x-0.3320)/(0.1858-y) frome rgb color spaceCCT=449n3+3525n2+6823.3n+5520.33where n=((0.23881)R+(0.25499)G+(-0.58291)B)/((0.11109)R+(-0.85406)G+(0.52289)B) HSVRGB to HSV conversion formula The R,G,B values are divided by 255 to change the range from 0..255 to 0..1: R’ = R/255G’ = G/255B’ = B/255 Cmax = max(R’, G’, B’) Cmin = min(R’, G’, B’) Î” = Cmax - Cmin Hue calculation: &lt;img src=https://www.rapidtables.com/convert/color/rgb-to-hsv/hue-calc2.gif&gt; Saturation calculation: &lt;img src=https://www.rapidtables.com/convert/color/rgb-to-hsv/sat-calc.gif&gt; Value calculation:V = Cmax]]></content>
+      <tags>
+        <tag>lqn</tag>
+        <tag>color</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[colorRealism_2]]></title>
+    <url>%2F2019%2F04%2F23%2FcolorRealism-2%2F</url>
+    <content type="text"><![CDATA[lalonde_iccv_07Application to Automatic Image RecoloringClassify the image and find whether matching global scene avaliable. recolor the object to match the colors of similar objects in that nearest scene. try to make the object more similar to its surroundings. The goal of recoloring is to modify a source color distribution Ds in order to match a target color distribution Dt. They propose an entirely automatic algorithm.Each color distribution is represented by a mixture of k spherical gaussians (k = 100 and remains constant for all images), and the distributions are matched in a soft way using the solution to the well-known transportation problem. The algorithm is divided in three steps.(In CIE LAB color space) use the Earth Mover’s Distance algorithm to compute the best assignment between the clusters in Ds and Dt. color shift vectors for each cluster in Ds are computed as a weighted average of its distance in color space to each of its assigned clusters in Dt. every pixel in Ds can be recolored by computing a weighted average of clusters shifts, with weights inversely proportional to the pixel-cluster distance.]]></content>
+      <tags>
+        <tag>image</tag>
+        <tag>lqn</tag>
+        <tag>harmonization</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[colorRealism_1]]></title>
+    <url>%2F2019%2F04%2F22%2FcolorRealism%2F</url>
+    <content type="text"><![CDATA[Earth mover’s distance Pairwise distance == Euclidean distance]]></content>
+      <tags>
+        <tag>image</tag>
+        <tag>lqn</tag>
+        <tag>harmonization</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Youtube_VOS]]></title>
+    <url>%2F2019%2F04%2F13%2FYoutube-VOS%2F</url>
+    <content type="text"><![CDATA[YouTube-VOS &nbsp; &nbsp; &nbsp; &nbsp;The YouTube-VOS is the first large-scale dataset for video object segmentation. Our dataset contains 4000+ YouTube videos, 70+ common objects and densely-sampled high-quality pixel-level annotations. It is more than 30 times larger than the existing largest dataset (i.e. DAVIS) for video object segmentation. &nbsp; &nbsp; &nbsp; &nbsp; After analyzing ‘meta.json’, we found that the training set contains 3471 videos and 5945 objects in total. There is 63 categories in training set, each of which is annotated with a category name. The types of the object and the number of object and videos of each are as follows. type object_number video_number person 1499 680 ape 201 124 parrot 185 135 giant_panda 182 143 duck 162 71 lizard 157 137 hat 142 51 sedan 141 80 dog 137 73 monkey 134 84 sheep 130 59 rabbit 113 83 fish 109 57 cow 104 55 giraffe 100 46 zebra 96 47 snake 93 86 bus 91 42 bear 87 50 cat 86 55 fox 80 58 skateboard 76 36 leopard 75 56 elephant 75 41 truck 73 37 dolphin 73 44 hand 72 42 turtle 71 57 deer 71 50 airplane 69 51 train 65 56 owl 63 52 bird 62 37 tiger 58 47 shark 56 42 motorbike 52 30 frog 52 40 earless_seal 52 31 mouse 51 37 plant 49 20 others 48 27 horse 47 22 penguin 45 20 lion 42 30 hedgehog 42 33 umbrella 41 16 snail 38 32 eagle 37 34 boat 36 24 knife 35 17 camel 34 32 whale 33 26 crocodile 32 23 paddle 29 10 frisbee 29 18 tennis_racket 28 13 raccoon 26 20 toilet 23 15 squirrel 20 18 sign 18 10 bucket 9 4 parachute 8 4 bike 1 1 &nbsp; &nbsp; &nbsp; &nbsp;The code to get the detail of the json file are as follows.1234567891011121314151617181920212223242526jsonData = loadjson(&apos;meta.json&apos;);% load jsonData.matvideos_summation = fieldnames(jsonData.videos); %展开jsonDatavideos_num = length(videos_summation)videos = struct2cell(jsonData);videos = struct2cell(videos&#123;1,1&#125;);for i=1:videos_num video_saparate(i) = struct2cell(videos&#123;i,1&#125;); %展开videos video_saparate_2&#123;i&#125; = struct2cell(video_saparate&#123;1,i&#125;);%video_mask_num 表示每个video有几个mask video_mask_num(i)= length(video_saparate_2&#123;1,i&#125;); for j=1:video_mask_num(i) video_mask&#123;j&#125; = struct2cell(video_saparate_2&#123;1,i&#125;&#123;j,1&#125;); %展开单独的mask end video_frame_number = length (video_mask&#123;1,1&#125;&#123;2,1&#125;); video_object = video_mask&#123;1,1&#125;&#123;1,1&#125;; object&#123;i&#125; = video_object; mask_number(i) = video_mask_num(i); frame_number(i) = video_frame_number;endobject = reshape(object,[videos_num,1]);mask_number = mask_number&apos;;frame_number = frame_number&apos;;]]></content>
+      <tags>
+        <tag>video</tag>
+        <tag>rx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Video harmonization 1]]></title>
+    <url>%2F2019%2F04%2F12%2Fvideo-harmonization-1%2F</url>
+    <content type="text"><![CDATA[To incorporate temporal consistency between consecutive harmonized frames, a two-frame coordinated training strategy with a regional temporal loss is adopted. Training phase: the two frames are fed to the harmonization network in acoordinate but separate way Testing phase: the harmonization network processes a video in a frame by frame way. To further enhance the realism of the harmonized results, the harmonization network is trained in an adversarial way with a pixel-wise disharmony discriminator The well-trained discriminator can also be employed to predict the disharmony area in the input, which holds as a replacement of the input foreground mask. DAVIS The harmonization network requires training data covering tremendous scenes to learn the natural appearances of foregrounds in various cases. Meanwhile, we also need the ground-truth optical flows between consecutive frames for evaluating the temporal consistency.Training a FlowNet to predict optical flows, which shows competitive performance compared to state-of-the-art methods like DeepFlow andEpicFlow. Dancing MSCOCO Training all the classes together inevitably introducesbiases. select images containing ’people’ as the foregrounds wipe off the images whose foreground area is smaller than 10% of the whole image Cut out the foreground and apply inpainting to fill the holes to obtain pure background images. simulates a background movement in a video. We apply color adjustments to the foregrounds to simulate the composite images. performing color transfer between random foreground pairs perform random adjustments of the basic color propertiesincluding exposure, hue, saturation, temperature, contrast, andtone curve. we apply the same random affine transform to the original foreground and the color adjusted foreground, which simulates a foreground movement in a video, and paste it back to the corresponding randomly cropped background. Since we know the exact affine transform between the foregrounds,it is easy to acquire the corresponding ground-truth opticalflow. The affine transform parameters are sampled from asuitable range in order not to conduct large-scale foregroundmovements. Finally33,338 pairs of ”consecutive original frames” and their corresponding” consecutive composite frames”. Training data: 29,818 pairs Validation data: 1,000 pairs Testing data: 2,520 pairs We have also tried generating more than one distorted copy for each image, but found a marginal improvement in the training.]]></content>
+      <tags>
+        <tag>lqn</tag>
+        <tag>video</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Image harmonization dataset]]></title>
+    <url>%2F2019%2F04%2F04%2FImage-harmonization-dataset%2F</url>
+    <content type="text"><![CDATA[All synthesized composite images has the same semantic information with the original one. Image with Segmentation Masks Microsoft COCO dataset Object segmentation masks and image. Transfer the appearance from the object with the same semantics to the target object. In order to ensure the edited object to be plausibale. Color transfer: statistics of the luminance color temperature histogram matching method. Applying different transfer parameters for both the luminance and color temperature on one image. Using an aesthetics prediction model to filter out low quality images. Images with Different Styles MIT-Adobe FiveK dataset Original image and another 5 different styles re-touched by professional photographers. Randomly selected style and manually segment a region Crop this segmented region and overlay on the imagewith another style to generate the synthesized compositeimage. Flickr Images with Diversity Flicker dataset Images contain different scenes or sylized images Using pre-trained scene parsing model to predict semantic pixel-wise. Refernced: https://arxiv.org/pdf/1703.00069.pdf]]></content>
+      <tags>
+        <tag>image</tag>
+        <tag>lqn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Video-object-segmentation-2]]></title>
+    <url>%2F2019%2F04%2F01%2FVideo-object-segmentation-2%2F</url>
+    <content type="text"><![CDATA[DAVIS is a dataset with pixel-perfect ground truth annotations Dataset Our dataset contains three subsets. Training: 3471 video sequences with densely-sampled multi-object annotations. Each object is annotated with a category name, there is 65 categories in traning set.Validation: 474 video sequences with the first-frame annotations. It includes objects from the 65 training categories, and 26 unseen categories in training. Test: Another 508 sequences with the first-frame annotations. It includes objects from the 65 training categories, and 29 unseen categories in training. RGB images and annotations for the labeled frames will be provided. We will also provide a download link for all image frames. Evaluation of validation and test sets will be done by uploading results to our evaluation server. Category information for validation and test sets will not be released.]]></content>
+      <tags>
+        <tag>lqn</tag>
+        <tag>video</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Video-Object-segmentation-1]]></title>
+    <url>%2F2019%2F04%2F01%2FVideo-object-segmentation-1%2F</url>
+    <content type="text"><![CDATA[Three classic tasks related to objects in CV: Classification: Aims to answer the “what” Detction, Segmentation: Aims to answer the “where” And Segmentation specifically aims to do it at the pixel level Comparing to semantic segmentation, the task of video object segmentation introduces two differences: Adding a temporal component:Our task is to find the pixels corresponding to the objects of interest in each consecutive frame of a video. Segmenting general,NON-semantic objects This can also be thought of as a pixel-level object tracking problem. Unsupervised (aka video saliency detection): The task is to find and segment the main object in the video. This means the algorithm should decide by itself what the “main” object is. Semi-supervised: given the ground truth segmentation mask of (only) the first frame as input, segment the annotated object in every consecutive frame. Two primary metrics to measure segmentation success: Region Similarity: Measuring the amount of mislabeled pixels. Contour Accuracy: Measuring the precision of the segmentation boundaries. Reference: https://techburst.io/video-object-segmentation-the-basics-758e77321914]]></content>
+      <tags>
+        <tag>lqn</tag>
+        <tag>video</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Term]]></title>
+    <url>%2F2019%2F04%2F01%2FTerm%2F</url>
+    <content type="text"><![CDATA[Receptive fieldEnd to endEncoder-decoderRNN LSTMCNNDNN]]></content>
+      <tags>
+        <tag>lqn</tag>
+        <tag>research</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello hrx]]></title>
+    <url>%2F2019%2F03%2F31%2FHello-hrx%2F</url>
+    <content type="text"><![CDATA[Hi~ 4.14]]></content>
+      <tags>
+        <tag>Casual</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F03%2F31%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
