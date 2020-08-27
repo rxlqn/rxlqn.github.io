@@ -347,7 +347,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/Video-object-segmentation-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/Video-object-segmentation-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liwy">
@@ -367,7 +367,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/04/01/Video-object-segmentation-1/" class="post-title-link" itemprop="url">Video-Object-segmentation-1</a>
+                <a href="/2019/04/01/Video-object-segmentation-2/" class="post-title-link" itemprop="url">Video-object-segmentation-2</a>
               
             
           </h1>
@@ -392,7 +392,7 @@
                 
               
 
-              <time title="Created: 2019-04-01 14:47:05" itemprop="dateCreated datePublished" datetime="2019-04-01T14:47:05+08:00">2019-04-01</time>
+              <time title="Created: 2019-04-01 17:15:36" itemprop="dateCreated datePublished" datetime="2019-04-01T17:15:36+08:00">2019-04-01</time>
             
 
             
@@ -409,7 +409,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-12 20:23:33" itemprop="dateModified" datetime="2019-04-12T20:23:33+08:00">2019-04-12</time>
+                <time title="Modified: 2019-04-12 20:23:43" itemprop="dateModified" datetime="2019-04-12T20:23:43+08:00">2019-04-12</time>
               
             
           </span>
@@ -445,31 +445,14 @@
       
         
           
-            <h2 id="Three-classic-tasks-related-to-objects-in-CV"><a href="#Three-classic-tasks-related-to-objects-in-CV" class="headerlink" title="Three classic tasks related to objects in CV:"></a>Three classic tasks related to objects in CV:</h2><ul>
-<li><p>Classification: Aims to answer the “what”</p>
-</li>
-<li><p>Detction, Segmentation: Aims to answer the “where”</p>
-<p> And Segmentation specifically aims to do it at the pixel level</p>
-</li>
-</ul>
-<p>  <img src="https://cdn-images-1.medium.com/max/2400/1*TwcMmXXuumsDRvgaY2OCQA.png" width="60%" height="60%"></p>
-<h2 id="Comparing-to-semantic-segmentation-the-task-of-video-object-segmentation-introduces-two-differences"><a href="#Comparing-to-semantic-segmentation-the-task-of-video-object-segmentation-introduces-two-differences" class="headerlink" title="Comparing to semantic segmentation, the task of video object segmentation introduces two differences:"></a>Comparing to semantic segmentation, the task of video object segmentation introduces two differences:</h2><ul>
-<li><p>Adding a temporal component:<br>Our task is to find the pixels corresponding to the objects of interest in each <strong>consecutive frame</strong> of a video.</p>
-</li>
-<li><p>Segmenting general,NON-semantic objects</p>
-</li>
-</ul>
-<p><em>This can also be thought of as a <strong>pixel-level</strong> object tracking problem.</em></p>
+            <p><strong>DAVIS</strong> is a dataset with pixel-perfect ground truth annotations</p>
+<p>Dataset</p>
+<p>Our dataset contains three subsets.</p>
 <ul>
-<li>Unsupervised (aka video saliency detection): The task is to find and segment the <strong>main object</strong> in the video. This means the algorithm should decide by <strong>itself</strong> what the “main” object is.</li>
-<li>Semi-supervised: given the ground truth segmentation mask of (only) the <strong>first frame</strong> as input, segment the annotated object in every consecutive frame.</li>
+<li>Training: 3471 video sequences with densely-sampled multi-object annotations. Each object is annotated with a category name, there is 65 categories in traning set.<br>Validation: 474 video sequences with the first-frame annotations. It includes objects from the 65 training categories, and 26 unseen categories in training.</li>
+<li>Test: Another 508 sequences with the first-frame annotations. It includes objects from the 65 training categories, and 29 unseen categories in training.</li>
+<li>RGB images and annotations for the labeled frames will be provided. We will also provide a download link for all image frames. Evaluation of validation and test sets will be done by uploading results to our evaluation server. Category information for validation and test sets will not be released.</li>
 </ul>
-<p>Two primary metrics to measure segmentation success:</p>
-<ul>
-<li>Region Similarity: Measuring the amount of mislabeled pixels.</li>
-<li>Contour Accuracy: Measuring the precision of the segmentation boundaries.</li>
-</ul>
-<p>Reference: <a href="https://techburst.io/video-object-segmentation-the-basics-758e77321914" target="_blank" rel="noopener">https://techburst.io/video-object-segmentation-the-basics-758e77321914</a></p>
 
           
         
@@ -613,6 +596,185 @@
         
           
             <p>Receptive field<br>End to end<br>Encoder-decoder<br>RNN   LSTM<br>CNN<br>DNN</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/Video-object-segmentation-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liwy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rx_Lqn Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/01/Video-object-segmentation-1/" class="post-title-link" itemprop="url">Video-Object-segmentation-1</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-01 14:47:05" itemprop="dateCreated datePublished" datetime="2019-04-01T14:47:05+08:00">2019-04-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-12 20:23:33" itemprop="dateModified" datetime="2019-04-12T20:23:33+08:00">2019-04-12</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Three-classic-tasks-related-to-objects-in-CV"><a href="#Three-classic-tasks-related-to-objects-in-CV" class="headerlink" title="Three classic tasks related to objects in CV:"></a>Three classic tasks related to objects in CV:</h2><ul>
+<li><p>Classification: Aims to answer the “what”</p>
+</li>
+<li><p>Detction, Segmentation: Aims to answer the “where”</p>
+<p> And Segmentation specifically aims to do it at the pixel level</p>
+</li>
+</ul>
+<p>  <img src="https://cdn-images-1.medium.com/max/2400/1*TwcMmXXuumsDRvgaY2OCQA.png" width="60%" height="60%"></p>
+<h2 id="Comparing-to-semantic-segmentation-the-task-of-video-object-segmentation-introduces-two-differences"><a href="#Comparing-to-semantic-segmentation-the-task-of-video-object-segmentation-introduces-two-differences" class="headerlink" title="Comparing to semantic segmentation, the task of video object segmentation introduces two differences:"></a>Comparing to semantic segmentation, the task of video object segmentation introduces two differences:</h2><ul>
+<li><p>Adding a temporal component:<br>Our task is to find the pixels corresponding to the objects of interest in each <strong>consecutive frame</strong> of a video.</p>
+</li>
+<li><p>Segmenting general,NON-semantic objects</p>
+</li>
+</ul>
+<p><em>This can also be thought of as a <strong>pixel-level</strong> object tracking problem.</em></p>
+<ul>
+<li>Unsupervised (aka video saliency detection): The task is to find and segment the <strong>main object</strong> in the video. This means the algorithm should decide by <strong>itself</strong> what the “main” object is.</li>
+<li>Semi-supervised: given the ground truth segmentation mask of (only) the <strong>first frame</strong> as input, segment the annotated object in every consecutive frame.</li>
+</ul>
+<p>Two primary metrics to measure segmentation success:</p>
+<ul>
+<li>Region Similarity: Measuring the amount of mislabeled pixels.</li>
+<li>Contour Accuracy: Measuring the precision of the segmentation boundaries.</li>
+</ul>
+<p>Reference: <a href="https://techburst.io/video-object-segmentation-the-basics-758e77321914" target="_blank" rel="noopener">https://techburst.io/video-object-segmentation-the-basics-758e77321914</a></p>
 
           
         
@@ -1002,7 +1164,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1045,7 +1207,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

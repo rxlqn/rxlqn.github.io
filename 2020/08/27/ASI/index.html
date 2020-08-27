@@ -94,18 +94,23 @@
 
 
 
-  <meta name="description" content="How to convert CCT to RGB Calculate cct from RGB (1000~40000) Calculate luminance of those RGB values (Luminance = (Max(R,G,B) + Min(R,G,B)) / 2) Alpha-blend the RGB values with the temperature RGB va">
-<meta name="keywords" content="lqn,color">
+  <meta name="description" content="ASI 主站芯片设计  模拟部分利用ASI4U进行透传  数字部分  实现曼切斯特编解码 主站请求报文 从站响应报文解析 ASI周期管理 FIFO       从站芯片设计  从站芯片框图  模拟部分可能也可以利用ASI4U主站芯片代替透传  数字部分 实现曼切斯特编解码 主站请求报文解析 从站响应报文发送 数字输入输出 永久存储单元 FIFO设计       总线传输信号 APM调制 曼切斯特Ⅱ">
+<meta name="keywords" content="ASI,FPGA,RISCV">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cct2rgb">
-<meta property="og:url" content="http://yoursite.com/2019/05/30/cct2rgb/index.html">
+<meta property="og:title" content="ASI">
+<meta property="og:url" content="http://yoursite.com/2020/08/27/ASI/index.html">
 <meta property="og:site_name" content="Rx_Lqn Blog">
-<meta property="og:description" content="How to convert CCT to RGB Calculate cct from RGB (1000~40000) Calculate luminance of those RGB values (Luminance = (Max(R,G,B) + Min(R,G,B)) / 2) Alpha-blend the RGB values with the temperature RGB va">
+<meta property="og:description" content="ASI 主站芯片设计  模拟部分利用ASI4U进行透传  数字部分  实现曼切斯特编解码 主站请求报文 从站响应报文解析 ASI周期管理 FIFO       从站芯片设计  从站芯片框图  模拟部分可能也可以利用ASI4U主站芯片代替透传  数字部分 实现曼切斯特编解码 主站请求报文解析 从站响应报文发送 数字输入输出 永久存储单元 FIFO设计       总线传输信号 APM调制 曼切斯特Ⅱ">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-30T12:46:03.381Z">
+<meta property="og:image" content="c:/Users/rxlqn/AppData/Roaming/Typora/typora-user-images/image-20200821200705921.png">
+<meta property="og:image" content="c:/Users/rxlqn/AppData/Roaming/Typora/typora-user-images/image-20200821194947217.png">
+<meta property="og:image" content="c:/Users/rxlqn/AppData/Roaming/Typora/typora-user-images/image-20200821195457376.png">
+<meta property="og:image" content="c:/Users/rxlqn/AppData/Roaming/Typora/typora-user-images/image-20200821195528158.png">
+<meta property="og:updated_time" content="2020-08-27T10:38:47.521Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cct2rgb">
-<meta name="twitter:description" content="How to convert CCT to RGB Calculate cct from RGB (1000~40000) Calculate luminance of those RGB values (Luminance = (Max(R,G,B) + Min(R,G,B)) / 2) Alpha-blend the RGB values with the temperature RGB va">
+<meta name="twitter:title" content="ASI">
+<meta name="twitter:description" content="ASI 主站芯片设计  模拟部分利用ASI4U进行透传  数字部分  实现曼切斯特编解码 主站请求报文 从站响应报文解析 ASI周期管理 FIFO       从站芯片设计  从站芯片框图  模拟部分可能也可以利用ASI4U主站芯片代替透传  数字部分 实现曼切斯特编解码 主站请求报文解析 从站响应报文发送 数字输入输出 永久存储单元 FIFO设计       总线传输信号 APM调制 曼切斯特Ⅱ">
+<meta name="twitter:image" content="c:/Users/rxlqn/AppData/Roaming/Typora/typora-user-images/image-20200821200705921.png">
 
 
 
@@ -113,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/30/cct2rgb/">
+  <link rel="canonical" href="http://yoursite.com/2020/08/27/ASI/">
 
 
 
@@ -123,7 +128,7 @@
   };
 </script>
 
-  <title>cct2rgb | Rx_Lqn Blog</title>
+  <title>ASI | Rx_Lqn Blog</title>
   
 
 
@@ -351,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/30/cct2rgb/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/27/ASI/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liwy">
@@ -368,7 +373,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">cct2rgb
+          <h1 class="post-title" itemprop="name headline">ASI
 
               
             
@@ -394,7 +399,7 @@
                 
               
 
-              <time title="Created: 2019-05-30 20:38:26 / Modified: 20:46:03" itemprop="dateCreated datePublished" datetime="2019-05-30T20:38:26+08:00">2019-05-30</time>
+              <time title="Created: 2020-08-27 18:36:02 / Modified: 18:38:47" itemprop="dateCreated datePublished" datetime="2020-08-27T18:36:02+08:00">2020-08-27</time>
             
 
             
@@ -433,16 +438,62 @@
       
 
       
-        <h2 id="How-to-convert-CCT-to-RGB"><a href="#How-to-convert-CCT-to-RGB" class="headerlink" title="How to convert CCT to RGB"></a>How to convert CCT to RGB</h2><ul>
-<li>Calculate cct from RGB (1000~40000)</li>
-<li>Calculate luminance of those RGB values (Luminance = (Max(R,G,B) + Min(R,G,B)) / 2)</li>
-<li>Alpha-blend the RGB values with the temperature RGB values at the requested strength (max strength = 50/50 blend)</li>
-<li>Calculate HSL equivalents for the newly blended RGB values</li>
-<li>Convert those HSL equivalents back to RGB, but substitute the ORIGINAL luminance value (this maintains the luminance of the pixel)</li>
+        <h3 id="ASI"><a href="#ASI" class="headerlink" title="ASI"></a>ASI</h3><ul>
+<li><p>主站芯片设计</p>
+<ul>
+<li><p>模拟部分利用ASI4U进行透传</p>
+</li>
+<li><p>数字部分</p>
+<ul>
+<li>实现曼切斯特编解码</li>
+<li>主站请求报文</li>
+<li>从站响应报文解析</li>
+<li>ASI周期管理</li>
+<li>FIFO</li>
 </ul>
-<h3 id="Matlab-implementation"><a href="#Matlab-implementation" class="headerlink" title="Matlab implementation"></a>Matlab implementation</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">function img_new = temperatureRGB(img,cct)</span><br><span class="line">tempStrength = 30/200;       % 1-100    转移量</span><br><span class="line">cct(cct&lt;1000) = 1000;</span><br><span class="line">cct(cct&gt;40000) = 40000;</span><br><span class="line"></span><br><span class="line">%% example</span><br><span class="line">% img = imread(&apos;T:\My_Project\image harmonization\xue_reimplement\code\testdata\a0711-WP_IMG_1592.jpg&apos;);</span><br><span class="line">% img = im2double(img);</span><br><span class="line">% [row,coloum,channel] = size(img);</span><br><span class="line">% </span><br><span class="line">% img_xyz = rgb2xyz(img);</span><br><span class="line">% xy = xyz2xy(img_xyz);</span><br><span class="line">% cct = xy2cct(xy);     %xy color space  </span><br><span class="line">%%</span><br><span class="line">img = im2double(img);</span><br><span class="line"></span><br><span class="line">old_lumi = rgb2hsl(img);</span><br><span class="line">old_lumi = old_lumi(:,:,3);</span><br><span class="line"></span><br><span class="line">temperature = cct / 100;</span><br><span class="line">[r,c] = size(temperature);</span><br><span class="line">%</span><br><span class="line">% Calculate RED:</span><br><span class="line">%</span><br><span class="line">red(temperature&lt;=66) = 255;</span><br><span class="line">red(temperature&gt;66) = (((temperature(temperature&gt;66) - 60).^-0.1332047592)) * 329.698727446;</span><br><span class="line">red(red&gt;255) = 255;</span><br><span class="line">red(red&lt;0) = 0;</span><br><span class="line">% red = reshape(red,r,c);</span><br><span class="line"></span><br><span class="line">%</span><br><span class="line">% Calculate GREEN:</span><br><span class="line">%</span><br><span class="line">green(temperature&lt;=66) = 99.4708025861 * reallog(temperature(temperature&lt;=66)) - 161.1195681661;</span><br><span class="line">green(temperature&gt;66) = ((temperature(temperature&gt;66) - 60).^-0.0755148492) * 288.1221695283;</span><br><span class="line">green(green&gt;255) = 255;</span><br><span class="line">green(green&lt;0) = 0;</span><br><span class="line">% green = reshape(green,r,c);</span><br><span class="line"></span><br><span class="line">%</span><br><span class="line">% Calculate BLUE:</span><br><span class="line">%</span><br><span class="line">blue(temperature&gt;=66) = 255;</span><br><span class="line">blue(temperature&lt;=19) = 0;</span><br><span class="line"></span><br><span class="line">blue(temperature&lt;66&amp;temperature&gt;19) = reallog((temperature(temperature&lt;66&amp;temperature&gt;19) - 10))* 138.5177312231 - 305.0447927307;</span><br><span class="line">blue(blue&gt;255) = 255;</span><br><span class="line">blue(blue&lt;0) = 0;</span><br><span class="line">% blue = reshape(blue,r,c);</span><br><span class="line"></span><br><span class="line">%</span><br><span class="line">% Return RGB Vector</span><br><span class="line">%</span><br><span class="line">sRGB = [red,green,blue];</span><br><span class="line">sRGB = reshape(sRGB,r,c,3);</span><br><span class="line"></span><br><span class="line">sRGB = img * (1-tempStrength) + sRGB/255 * tempStrength;   %0-1 double</span><br><span class="line"></span><br><span class="line">% 保留旧的亮度</span><br><span class="line">new_hsl = rgb2hsl(sRGB);</span><br><span class="line">new_hsl(:,:,3) = old_lumi;</span><br><span class="line">img_new = hsl2rgb(new_hsl);</span><br><span class="line">imshow(img_new);</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<p>Thanks to <strong>Tanner</strong> for his algorithm</p>
-<p>Links: <a href="http://www.tannerhelland.com/4435/convert-temperature-rgb-algorithm-code/" target="_blank" rel="noopener">http://www.tannerhelland.com/4435/convert-temperature-rgb-algorithm-code/</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>从站芯片设计</p>
+<ul>
+<li><p>从站芯片框图<img src="C:\Users\rxlqn\AppData\Roaming\Typora\typora-user-images\image-20200821200705921.png" alt="image-20200821200705921"></p>
+</li>
+<li><p>模拟部分可能也可以利用ASI4U主站芯片代替透传</p>
+</li>
+<li>数字部分<ul>
+<li>实现曼切斯特编解码</li>
+<li>主站请求报文解析</li>
+<li>从站响应报文发送</li>
+<li>数字输入输出</li>
+<li>永久存储单元</li>
+<li>FIFO设计</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>总线传输信号<ul>
+<li>APM调制</li>
+<li>曼切斯特Ⅱ编码：下降沿0，上升沿1</li>
+<li>调制后的信号间隔6us，ASI传输速度167kbps</li>
+<li><img src="C:\Users\rxlqn\AppData\Roaming\Typora\typora-user-images\image-20200821194947217.png" alt="image-20200821194947217" style="zoom:80%;"></li>
+</ul>
+</li>
+<li>数据交换方式<ul>
+<li>主站请求，主站暂停，从站响应，从站暂停，发送暂停，从站响应超时（10bit）</li>
+<li>主站请求14bit，从站应答7bit，每一位长度6us</li>
+<li>主站暂停最少3bit，最多10bit</li>
+<li>主站请求报文<img src="C:\Users\rxlqn\AppData\Roaming\Typora\typora-user-images\image-20200821195457376.png" alt="image-20200821195457376"></li>
+</ul>
+</li>
+<li><p>从站响应报文<img src="C:\Users\rxlqn\AppData\Roaming\Typora\typora-user-images\image-20200821195528158.png" alt="image-20200821195528158"></p>
+</li>
+<li><p>9种请求响应报文</p>
+</li>
+</ul>
 
       
     </div>
@@ -466,9 +517,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/lqn/" rel="tag"># lqn</a>
+            <a href="/tags/ASI/" rel="tag"># ASI</a>
           
-            <a href="/tags/color/" rel="tag"># color</a>
+            <a href="/tags/FPGA/" rel="tag"># FPGA</a>
+          
+            <a href="/tags/RISCV/" rel="tag"># RISCV</a>
           
         </div>
       
@@ -481,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/16/caffe/" rel="next" title="caffe">
-                <i class="fa fa-chevron-left"></i> caffe
+              <a href="/2019/10/08/manchester_coding/" rel="next" title="manchester_coding">
+                <i class="fa fa-chevron-left"></i> manchester_coding
               </a>
             
           </div>
@@ -490,10 +543,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/08/manchester_coding/" rel="prev" title="manchester_coding">
-                manchester_coding <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -673,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-convert-CCT-to-RGB"><span class="nav-number">1.</span> <span class="nav-text">How to convert CCT to RGB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Matlab-implementation"><span class="nav-number">1.1.</span> <span class="nav-text">Matlab implementation</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ASI"><span class="nav-number">1.</span> <span class="nav-text">ASI</span></a></li></ol></div>
             
 
           </div>

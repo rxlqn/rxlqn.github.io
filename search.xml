@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ASI]]></title>
+    <url>%2F2020%2F08%2F27%2FASI%2F</url>
+    <content type="text"><![CDATA[ASI 主站芯片设计 模拟部分利用ASI4U进行透传 数字部分 实现曼切斯特编解码 主站请求报文 从站响应报文解析 ASI周期管理 FIFO 从站芯片设计 从站芯片框图 模拟部分可能也可以利用ASI4U主站芯片代替透传 数字部分 实现曼切斯特编解码 主站请求报文解析 从站响应报文发送 数字输入输出 永久存储单元 FIFO设计 总线传输信号 APM调制 曼切斯特Ⅱ编码：下降沿0，上升沿1 调制后的信号间隔6us，ASI传输速度167kbps 数据交换方式 主站请求，主站暂停，从站响应，从站暂停，发送暂停，从站响应超时（10bit） 主站请求14bit，从站应答7bit，每一位长度6us 主站暂停最少3bit，最多10bit 主站请求报文 从站响应报文 9种请求响应报文]]></content>
+      <tags>
+        <tag>ASI</tag>
+        <tag>FPGA</tag>
+        <tag>RISCV</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[manchester_coding]]></title>
     <url>%2F2019%2F10%2F08%2Fmanchester_coding%2F</url>
     <content type="text"><![CDATA[数字信号编码是要解决数字数据的数字信号表示问题，即通过对数字信号进行编码来表示数据。数字信号编码的工作一般由硬件完成，常用的编码方法有以下三种：不归零码码、曼彻斯特编码、差分曼彻斯特编码。 差分曼彻斯特编码的优点为：收发双方可以根据编码自带的时钟信号来保持同步，无需专门传递同步信号的线路，因此成本低；缺点为：实现技术复杂。 曼彻斯特编码（Manchester Encoding），也叫做相位编码(PE)，是一个同步时钟编码技术，被物理层使用来编码一个同步位流的时钟和数据。曼彻斯特编码被用在以太网媒介系统中。曼彻斯特编码提供一个简单的方式给编码简单的二进制序列而没有长的周期没有转换级别，因而防止时钟同步的丢失，或来自低频率位移在贫乏补偿的模拟链接位错误。]]></content>
@@ -93,21 +103,21 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Video-Object-segmentation-1]]></title>
-    <url>%2F2019%2F04%2F01%2FVideo-object-segmentation-1%2F</url>
-    <content type="text"><![CDATA[Three classic tasks related to objects in CV: Classification: Aims to answer the “what” Detction, Segmentation: Aims to answer the “where” And Segmentation specifically aims to do it at the pixel level Comparing to semantic segmentation, the task of video object segmentation introduces two differences: Adding a temporal component:Our task is to find the pixels corresponding to the objects of interest in each consecutive frame of a video. Segmenting general,NON-semantic objects This can also be thought of as a pixel-level object tracking problem. Unsupervised (aka video saliency detection): The task is to find and segment the main object in the video. This means the algorithm should decide by itself what the “main” object is. Semi-supervised: given the ground truth segmentation mask of (only) the first frame as input, segment the annotated object in every consecutive frame. Two primary metrics to measure segmentation success: Region Similarity: Measuring the amount of mislabeled pixels. Contour Accuracy: Measuring the precision of the segmentation boundaries. Reference: https://techburst.io/video-object-segmentation-the-basics-758e77321914]]></content>
-      <tags>
-        <tag>lqn</tag>
-        <tag>video</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Term]]></title>
     <url>%2F2019%2F04%2F01%2FTerm%2F</url>
     <content type="text"><![CDATA[Receptive fieldEnd to endEncoder-decoderRNN LSTMCNNDNN]]></content>
       <tags>
         <tag>lqn</tag>
         <tag>research</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Video-Object-segmentation-1]]></title>
+    <url>%2F2019%2F04%2F01%2FVideo-object-segmentation-1%2F</url>
+    <content type="text"><![CDATA[Three classic tasks related to objects in CV: Classification: Aims to answer the “what” Detction, Segmentation: Aims to answer the “where” And Segmentation specifically aims to do it at the pixel level Comparing to semantic segmentation, the task of video object segmentation introduces two differences: Adding a temporal component:Our task is to find the pixels corresponding to the objects of interest in each consecutive frame of a video. Segmenting general,NON-semantic objects This can also be thought of as a pixel-level object tracking problem. Unsupervised (aka video saliency detection): The task is to find and segment the main object in the video. This means the algorithm should decide by itself what the “main” object is. Semi-supervised: given the ground truth segmentation mask of (only) the first frame as input, segment the annotated object in every consecutive frame. Two primary metrics to measure segmentation success: Region Similarity: Measuring the amount of mislabeled pixels. Contour Accuracy: Measuring the precision of the segmentation boundaries. Reference: https://techburst.io/video-object-segmentation-the-basics-758e77321914]]></content>
+      <tags>
+        <tag>lqn</tag>
+        <tag>video</tag>
       </tags>
   </entry>
   <entry>
