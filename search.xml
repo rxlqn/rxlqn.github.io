@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Challenges of real-world RL</title>
+      <link href="/2020/08/27/Challenges-of-real-world-RL/"/>
+      <url>/2020/08/27/Challenges-of-real-world-RL/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Challenge-1-Learning-On-the-Real-System-from-Limited-Samples"><a href="#Challenge-1-Learning-On-the-Real-System-from-Limited-Samples" class="headerlink" title="Challenge 1: Learning On the Real System from Limited Samples"></a>Challenge 1: Learning On the Real System from Limited Samples</h3><ul><li><p>Problem: Sampling Data</p><ul><li><p>limited samples.</p></li><li><p>latency.</p></li><li><p>non-stationarities.</p></li><li><p>noise.</p></li><li><p>as all training data comes from the real system, learning agents cannot have an overly aggressive <strong>exploration</strong> policy.</p></li><li><p>taking a lot of time to train – real system requires the algorithm to be <strong>sample-efficient </strong>and quickly performant.</p></li></ul></li></ul><ul><li><p>Related work</p><ul><li><p>few-shot learning.</p></li><li><p>Thompson Sampling.</p></li><li><p><strong>using expert demonstrations</strong> to bootstrap the agent .</p></li><li><p>learning transition models and using sampling strategies.</p></li></ul></li></ul><h3 id="Challenge-2-System-Delays"><a href="#Challenge-2-System-Delays" class="headerlink" title="Challenge 2: System Delays"></a>Challenge 2: System Delays</h3><ul><li><p>Problems</p><ul><li>delays in sensing actuation or reward feedback.</li></ul></li><li><p>Related work</p><ul><li><p>learning algorithm can learn the delay effects itself.</p></li><li><p>factored learning approach to take advantage of intermediate reward signals to improve learning in delayed tasks.</p></li><li><p>memory-based agent and leverage the retrieval system.</p></li><li><p>RUDDER algorithm.</p></li></ul></li></ul><h3 id="Challenge-3-High-Dimensional-Continuous-State-and-Action-Spaces"><a href="#Challenge-3-High-Dimensional-Continuous-State-and-Action-Spaces" class="headerlink" title="Challenge 3: High-Dimensional Continuous State and Action Spaces"></a>Challenge 3: High-Dimensional Continuous State and Action Spaces</h3>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> RL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ASI</title>
       <link href="/2020/08/27/ASI/"/>
       <url>/2020/08/27/ASI/</url>
@@ -188,9 +207,9 @@
       
         <tags>
             
-            <tag> video </tag>
-            
             <tag> lqn </tag>
+            
+            <tag> video </tag>
             
         </tags>
       
@@ -230,9 +249,9 @@
       
         <tags>
             
-            <tag> video </tag>
-            
             <tag> lqn </tag>
+            
+            <tag> video </tag>
             
         </tags>
       
@@ -251,9 +270,9 @@
       
         <tags>
             
-            <tag> video </tag>
-            
             <tag> lqn </tag>
+            
+            <tag> video </tag>
             
         </tags>
       
@@ -272,9 +291,9 @@
       
         <tags>
             
-            <tag> lqn </tag>
-            
             <tag> research </tag>
+            
+            <tag> lqn </tag>
             
         </tags>
       
